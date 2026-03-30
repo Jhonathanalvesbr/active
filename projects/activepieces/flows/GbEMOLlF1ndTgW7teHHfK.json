@@ -1,21 +1,21 @@
 {
   "id": "YDAralQxFdG4BVrQ4rhce",
   "created": "2026-03-30T19:04:26.312Z",
-  "updated": "2026-03-30T19:07:22.524Z",
+  "updated": "2026-03-30T19:08:59.685Z",
   "projectId": "CSPZGNbdcBwp2ivYLYaOi",
   "externalId": "GbEMOLlF1ndTgW7teHHfK",
   "ownerId": "r6l6kXh9PlyaBeG0xgrtE",
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "sUdBytWMBoP61ZtL7m5l2",
+  "publishedVersionId": "oirIY5zcN0eW9ao4uQZvu",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "sUdBytWMBoP61ZtL7m5l2",
-    "created": "2026-03-30T19:07:19.908Z",
-    "updated": "2026-03-30T19:07:22.456Z",
+    "id": "oirIY5zcN0eW9ao4uQZvu",
+    "created": "2026-03-30T19:08:59.512Z",
+    "updated": "2026-03-30T19:08:59.613Z",
     "flowId": "YDAralQxFdG4BVrQ4rhce",
     "displayName": "Sem Título",
     "trigger": {
@@ -27,7 +27,7 @@
         "valid": true,
         "displayName": "Retornar Resposta",
         "skip": false,
-        "lastUpdatedDate": "2026-03-30T19:07:19.937Z",
+        "lastUpdatedDate": "2026-03-30T19:08:59.537Z",
         "type": "PIECE",
         "settings": {
           "propertySettings": {
@@ -81,7 +81,7 @@
           }
         }
       },
-      "lastUpdatedDate": "2026-03-30T19:07:19.921Z",
+      "lastUpdatedDate": "2026-03-30T19:08:59.536Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "propertySettings": {
