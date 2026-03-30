@@ -1,0 +1,69 @@
+{
+  "id": "YDAralQxFdG4BVrQ4rhce",
+  "created": "2026-03-30T19:04:26.312Z",
+  "updated": "2026-03-30T19:04:32.507Z",
+  "projectId": "CSPZGNbdcBwp2ivYLYaOi",
+  "externalId": "GbEMOLlF1ndTgW7teHHfK",
+  "ownerId": "r6l6kXh9PlyaBeG0xgrtE",
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "5IGOnVFbUNzokL9ul1JLY",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "5IGOnVFbUNzokL9ul1JLY",
+    "created": "2026-03-30T19:04:26.320Z",
+    "updated": "2026-03-30T19:04:31.359Z",
+    "flowId": "YDAralQxFdG4BVrQ4rhce",
+    "displayName": "Sem Título",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Capturar Webhook",
+      "lastUpdatedDate": "2026-03-30T19:04:31.183Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "propertySettings": {
+          "authType": {
+            "type": "MANUAL"
+          },
+          "authFields": {
+            "type": "MANUAL"
+          },
+          "liveMarkdown": {
+            "type": "MANUAL"
+          },
+          "syncMarkdown": {
+            "type": "MANUAL"
+          },
+          "testMarkdown": {
+            "type": "MANUAL"
+          }
+        },
+        "pieceName": "@activepieces/piece-webhook",
+        "pieceVersion": "0.1.32",
+        "triggerName": "catch_webhook",
+        "input": {
+          "authType": "none",
+          "authFields": {},
+          "liveMarkdown": "",
+          "syncMarkdown": "",
+          "testMarkdown": ""
+        }
+      }
+    },
+    "updatedBy": "r6l6kXh9PlyaBeG0xgrtE",
+    "valid": true,
+    "schemaVersion": "18",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}
