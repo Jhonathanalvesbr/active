@@ -1,28 +1,87 @@
 {
   "id": "YDAralQxFdG4BVrQ4rhce",
   "created": "2026-03-30T19:04:26.312Z",
-  "updated": "2026-03-30T19:04:32.507Z",
+  "updated": "2026-03-30T19:07:22.524Z",
   "projectId": "CSPZGNbdcBwp2ivYLYaOi",
   "externalId": "GbEMOLlF1ndTgW7teHHfK",
   "ownerId": "r6l6kXh9PlyaBeG0xgrtE",
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "5IGOnVFbUNzokL9ul1JLY",
+  "publishedVersionId": "sUdBytWMBoP61ZtL7m5l2",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "5IGOnVFbUNzokL9ul1JLY",
-    "created": "2026-03-30T19:04:26.320Z",
-    "updated": "2026-03-30T19:04:31.359Z",
+    "id": "sUdBytWMBoP61ZtL7m5l2",
+    "created": "2026-03-30T19:07:19.908Z",
+    "updated": "2026-03-30T19:07:22.456Z",
     "flowId": "YDAralQxFdG4BVrQ4rhce",
     "displayName": "Sem Título",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
-      "lastUpdatedDate": "2026-03-30T19:04:31.183Z",
+      "nextAction": {
+        "name": "step_1",
+        "valid": true,
+        "displayName": "Retornar Resposta",
+        "skip": false,
+        "lastUpdatedDate": "2026-03-30T19:07:19.937Z",
+        "type": "PIECE",
+        "settings": {
+          "propertySettings": {
+            "fields": {
+              "type": "MANUAL",
+              "schema": {
+                "body": {
+                  "type": "JSON",
+                  "required": true,
+                  "displayName": "JSON Body"
+                },
+                "status": {
+                  "type": "NUMBER",
+                  "required": false,
+                  "displayName": "Status",
+                  "defaultValue": 200
+                },
+                "headers": {
+                  "type": "OBJECT",
+                  "required": false,
+                  "displayName": "Headers"
+                }
+              }
+            },
+            "respond": {
+              "type": "MANUAL"
+            },
+            "responseType": {
+              "type": "MANUAL"
+            }
+          },
+          "pieceName": "@activepieces/piece-webhook",
+          "pieceVersion": "0.1.32",
+          "actionName": "return_response",
+          "input": {
+            "fields": {
+              "body": "{\"\"}",
+              "status": 200,
+              "headers": {}
+            },
+            "respond": "stop",
+            "responseType": "json"
+          },
+          "errorHandlingOptions": {
+            "continueOnFailure": {
+              "value": false
+            },
+            "retryOnFailure": {
+              "value": false
+            }
+          }
+        }
+      },
+      "lastUpdatedDate": "2026-03-30T19:07:19.921Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "propertySettings": {
@@ -30,7 +89,8 @@
             "type": "MANUAL"
           },
           "authFields": {
-            "type": "MANUAL"
+            "type": "MANUAL",
+            "schema": {}
           },
           "liveMarkdown": {
             "type": "MANUAL"
