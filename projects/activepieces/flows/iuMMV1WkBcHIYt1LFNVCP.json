@@ -1,23 +1,23 @@
 {
-  "id": "jXK1YfVxW8OzLZaQFN7N4",
-  "created": "2026-03-30T19:09:28.067Z",
-  "updated": "2026-03-30T19:09:28.192Z",
+  "id": "eIuCVDP0NHLzBrefgCXjZ",
+  "created": "2026-03-30T19:09:45.636Z",
+  "updated": "2026-03-30T19:09:50.295Z",
   "projectId": "CSPZGNbdcBwp2ivYLYaOi",
-  "externalId": "GbEMOLlF1ndTgW7teHHfK",
-  "ownerId": null,
+  "externalId": "iuMMV1WkBcHIYt1LFNVCP",
+  "ownerId": "r6l6kXh9PlyaBeG0xgrtE",
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "ku5BDiPjFdITakWKZjmdk",
+  "publishedVersionId": "9xMmIIgqUHwyvigVTbIgT",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "ku5BDiPjFdITakWKZjmdk",
-    "created": "2026-03-30T19:09:28.073Z",
-    "updated": "2026-03-30T19:09:28.126Z",
-    "flowId": "jXK1YfVxW8OzLZaQFN7N4",
-    "displayName": "Sem Título",
+    "id": "9xMmIIgqUHwyvigVTbIgT",
+    "created": "2026-03-30T19:09:45.649Z",
+    "updated": "2026-03-30T19:09:50.236Z",
+    "flowId": "eIuCVDP0NHLzBrefgCXjZ",
+    "displayName": "Sem Título - Copy",
     "trigger": {
       "name": "trigger",
       "valid": true,
@@ -27,9 +27,10 @@
         "valid": true,
         "displayName": "Retornar Resposta",
         "skip": false,
-        "lastUpdatedDate": "2026-03-30T19:09:28.087Z",
+        "lastUpdatedDate": "2026-03-30T19:09:45.688Z",
         "type": "PIECE",
         "settings": {
+          "sampleData": {},
           "propertySettings": {
             "fields": {
               "type": "MANUAL",
@@ -81,7 +82,7 @@
           }
         }
       },
-      "lastUpdatedDate": "2026-03-30T19:09:28.087Z",
+      "lastUpdatedDate": "2026-03-30T19:09:45.688Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "propertySettings": {
