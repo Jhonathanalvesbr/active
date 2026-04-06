@@ -1,0 +1,134 @@
+{
+  "id": "GbRn3ATHgt7zEer96B3xc",
+  "created": "2026-04-02T22:30:14.958Z",
+  "updated": "2026-04-03T02:56:58.022Z",
+  "projectId": "hZ9SRSPyrL17b9RwoeLmK",
+  "externalId": "BAlsPLX1kq9bpKCTHIBkf",
+  "ownerId": "qoTbuh1nAnGl0JMj74SJD",
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "wjWZa3wXserZlM5XRlshK",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "wjWZa3wXserZlM5XRlshK",
+    "created": "2026-04-02T22:36:09.499Z",
+    "updated": "2026-04-03T02:56:56.809Z",
+    "flowId": "GbRn3ATHgt7zEer96B3xc",
+    "displayName": "Sem Título",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Linha nova ou atualizada",
+      "nextAction": {
+        "name": "step_1",
+        "valid": true,
+        "displayName": "Adicionar linha",
+        "skip": false,
+        "lastUpdatedDate": "2026-04-03T02:56:53.698Z",
+        "type": "PIECE",
+        "settings": {
+          "propertySettings": {
+            "values": {
+              "type": "MANUAL",
+              "schema": {
+                "values": {
+                  "type": "ARRAY",
+                  "required": true,
+                  "displayName": "Row Values"
+                }
+              }
+            },
+            "sheetId": {
+              "type": "MANUAL"
+            },
+            "as_string": {
+              "type": "MANUAL"
+            },
+            "spreadsheetId": {
+              "type": "DYNAMIC"
+            },
+            "first_row_headers": {
+              "type": "MANUAL"
+            },
+            "includeTeamDrives": {
+              "type": "MANUAL"
+            }
+          },
+          "pieceName": "@activepieces/piece-google-sheets",
+          "pieceVersion": "0.14.6",
+          "actionName": "insert_row",
+          "input": {
+            "auth": "{{connections['wzH6l5zf2ZujiRgZY9icv']}}",
+            "values": {
+              "values": [
+                "[1]"
+              ]
+            },
+            "sheetId": 0,
+            "as_string": false,
+            "spreadsheetId": "1vUZeEy5NnF3WlLgV3tsYwYzGNF9GXdAN00fHr4CQpIQ",
+            "first_row_headers": false,
+            "includeTeamDrives": false
+          },
+          "errorHandlingOptions": {
+            "continueOnFailure": {
+              "value": false
+            },
+            "retryOnFailure": {
+              "value": false
+            }
+          }
+        }
+      },
+      "lastUpdatedDate": "2026-04-03T02:56:04.978Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "propertySettings": {
+          "info": {
+            "type": "MANUAL"
+          },
+          "sheetId": {
+            "type": "MANUAL"
+          },
+          "spreadsheetId": {
+            "type": "DYNAMIC"
+          },
+          "trigger_column": {
+            "type": "MANUAL"
+          },
+          "includeTeamDrives": {
+            "type": "MANUAL"
+          }
+        },
+        "pieceName": "@activepieces/piece-google-sheets",
+        "pieceVersion": "0.14.6",
+        "triggerName": "google-sheets-new-or-updated-row",
+        "input": {
+          "auth": "{{connections['M68aQTmeRcKKbyilqh6oy']}}",
+          "info": "",
+          "sheetId": 0,
+          "spreadsheetId": "1Ap1if9dfaKP05bBUZTyBp6erHW34SosfqxtwDvse6oQ",
+          "trigger_column": "all_columns",
+          "includeTeamDrives": false
+        }
+      }
+    },
+    "updatedBy": "dScrR7PJJmy4sgK7nGT6w",
+    "valid": true,
+    "schemaVersion": "18",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [
+      "M68aQTmeRcKKbyilqh6oy",
+      "wzH6l5zf2ZujiRgZY9icv"
+    ],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}
