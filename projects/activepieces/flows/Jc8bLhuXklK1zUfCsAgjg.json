@@ -1,30 +1,41 @@
 {
-  "id": "mCFCStEY8bxKKMXe2xYDk",
-  "created": "2026-03-30T19:12:11.050Z",
-  "updated": "2026-03-30T19:15:39.693Z",
-  "projectId": "CSPZGNbdcBwp2ivYLYaOi",
+  "id": "60GJv2t71xLQOD1lHtHbK",
+  "created": "2026-04-09T22:44:09.549Z",
+  "updated": "2026-04-09T22:44:09.567Z",
+  "projectId": "CJApWSSpabapUBQknzSTy",
   "externalId": "Jc8bLhuXklK1zUfCsAgjg",
   "ownerId": null,
   "folderId": null,
-  "status": "ENABLED",
-  "publishedVersionId": "mfd7qbHdWwMmw2uukN9BT",
+  "status": "DISABLED",
+  "publishedVersionId": "nKJ7tnwsUl9SRSi7QSN0E",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "mfd7qbHdWwMmw2uukN9BT",
-    "created": "2026-03-30T19:15:25.752Z",
-    "updated": "2026-03-30T19:15:37.680Z",
-    "flowId": "mCFCStEY8bxKKMXe2xYDk",
+    "id": "nKJ7tnwsUl9SRSi7QSN0E",
+    "created": "2026-04-09T22:44:09.555Z",
+    "updated": "2026-04-09T22:44:09.617Z",
+    "flowId": "60GJv2t71xLQOD1lHtHbK",
     "displayName": "planilhas",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Linha nova ou atualizada",
-      "lastUpdatedDate": "2026-03-30T19:15:37.115Z",
+      "lastUpdatedDate": "2026-04-09T22:44:09.574Z",
       "type": "PIECE_TRIGGER",
       "settings": {
+        "input": {
+          "auth": "{{connections['OLBkRX8nCgvCVw0X4U61m']}}",
+          "info": "",
+          "sheetId": 0,
+          "spreadsheetId": "1ZcZz2bnda9HufrnyGQnhUWLOWpKC3muqucQ5b4gJ1Pc",
+          "trigger_column": "all_columns",
+          "includeTeamDrives": false
+        },
+        "pieceName": "@activepieces/piece-google-sheets",
+        "triggerName": "google-sheets-new-or-updated-row",
+        "pieceVersion": "0.14.6",
         "propertySettings": {
           "info": {
             "type": "MANUAL"
@@ -41,23 +52,12 @@
           "includeTeamDrives": {
             "type": "MANUAL"
           }
-        },
-        "pieceName": "@activepieces/piece-google-sheets",
-        "pieceVersion": "0.14.6",
-        "triggerName": "google-sheets-new-or-updated-row",
-        "input": {
-          "auth": "{{connections['OLBkRX8nCgvCVw0X4U61m']}}",
-          "info": "",
-          "sheetId": 0,
-          "spreadsheetId": "1ZcZz2bnda9HufrnyGQnhUWLOWpKC3muqucQ5b4gJ1Pc",
-          "trigger_column": "all_columns",
-          "includeTeamDrives": false
         }
       }
     },
-    "updatedBy": "r6l6kXh9PlyaBeG0xgrtE",
+    "updatedBy": null,
     "valid": true,
-    "schemaVersion": "18",
+    "schemaVersion": "21",
     "agentIds": [],
     "state": "LOCKED",
     "connectionIds": [

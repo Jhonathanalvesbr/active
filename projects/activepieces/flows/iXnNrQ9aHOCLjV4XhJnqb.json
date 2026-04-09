@@ -1,0 +1,69 @@
+{
+  "id": "L0dN5USkCKSIh21w9UkJ7",
+  "created": "2026-04-09T22:44:38.575Z",
+  "updated": "2026-04-09T22:44:58.912Z",
+  "projectId": "CJApWSSpabapUBQknzSTy",
+  "externalId": "iXnNrQ9aHOCLjV4XhJnqb",
+  "ownerId": "vEfocM95N26ViDRqk6bjF",
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "oR3WmP7CfWt8qMsaTMJds",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "oR3WmP7CfWt8qMsaTMJds",
+    "created": "2026-04-09T22:44:38.590Z",
+    "updated": "2026-04-09T22:44:57.584Z",
+    "flowId": "L0dN5USkCKSIh21w9UkJ7",
+    "displayName": "teste novo 123",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Capturar Webhook",
+      "lastUpdatedDate": "2026-04-09T22:44:46.264Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "authType": "none",
+          "authFields": {},
+          "liveMarkdown": "",
+          "syncMarkdown": "",
+          "testMarkdown": ""
+        },
+        "pieceName": "@activepieces/piece-webhook",
+        "triggerName": "catch_webhook",
+        "pieceVersion": "0.1.32",
+        "propertySettings": {
+          "authType": {
+            "type": "MANUAL"
+          },
+          "authFields": {
+            "type": "MANUAL"
+          },
+          "liveMarkdown": {
+            "type": "MANUAL"
+          },
+          "syncMarkdown": {
+            "type": "MANUAL"
+          },
+          "testMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      }
+    },
+    "updatedBy": "vEfocM95N26ViDRqk6bjF",
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}

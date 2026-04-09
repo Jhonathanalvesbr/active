@@ -1,35 +1,79 @@
 {
-  "id": "jXK1YfVxW8OzLZaQFN7N4",
-  "created": "2026-03-30T19:09:28.067Z",
-  "updated": "2026-03-30T19:09:28.192Z",
-  "projectId": "CSPZGNbdcBwp2ivYLYaOi",
+  "id": "NEwoh53qHHE5Dtw08v4n9",
+  "created": "2026-04-09T22:44:09.502Z",
+  "updated": "2026-04-09T22:44:28.074Z",
+  "projectId": "CJApWSSpabapUBQknzSTy",
   "externalId": "GbEMOLlF1ndTgW7teHHfK",
   "ownerId": null,
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "ku5BDiPjFdITakWKZjmdk",
+  "publishedVersionId": "LAVYd19QdS1GsolQEzFLR",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "ku5BDiPjFdITakWKZjmdk",
-    "created": "2026-03-30T19:09:28.073Z",
-    "updated": "2026-03-30T19:09:28.126Z",
-    "flowId": "jXK1YfVxW8OzLZaQFN7N4",
+    "id": "LAVYd19QdS1GsolQEzFLR",
+    "created": "2026-04-09T22:44:09.509Z",
+    "updated": "2026-04-09T22:44:09.569Z",
+    "flowId": "NEwoh53qHHE5Dtw08v4n9",
     "displayName": "Sem Título",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
+      "lastUpdatedDate": "2026-04-09T22:44:09.530Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "authType": "none",
+          "authFields": {},
+          "liveMarkdown": "",
+          "syncMarkdown": "",
+          "testMarkdown": ""
+        },
+        "pieceName": "@activepieces/piece-webhook",
+        "triggerName": "catch_webhook",
+        "pieceVersion": "0.1.32",
+        "propertySettings": {
+          "authType": {
+            "type": "MANUAL"
+          },
+          "authFields": {
+            "type": "MANUAL",
+            "schema": {}
+          },
+          "liveMarkdown": {
+            "type": "MANUAL"
+          },
+          "syncMarkdown": {
+            "type": "MANUAL"
+          },
+          "testMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      },
       "nextAction": {
         "name": "step_1",
         "valid": true,
         "displayName": "Retornar Resposta",
         "skip": false,
-        "lastUpdatedDate": "2026-03-30T19:09:28.087Z",
+        "lastUpdatedDate": "2026-04-09T22:44:09.531Z",
         "type": "PIECE",
         "settings": {
+          "input": {
+            "fields": {
+              "body": "{\"\"}",
+              "status": 200,
+              "headers": {}
+            },
+            "respond": "stop",
+            "responseType": "json"
+          },
+          "pieceName": "@activepieces/piece-webhook",
+          "actionName": "return_response",
+          "pieceVersion": "0.1.32",
           "propertySettings": {
             "fields": {
               "type": "MANUAL",
@@ -59,64 +103,20 @@
               "type": "MANUAL"
             }
           },
-          "pieceName": "@activepieces/piece-webhook",
-          "pieceVersion": "0.1.32",
-          "actionName": "return_response",
-          "input": {
-            "fields": {
-              "body": "{\"\"}",
-              "status": 200,
-              "headers": {}
-            },
-            "respond": "stop",
-            "responseType": "json"
-          },
           "errorHandlingOptions": {
-            "continueOnFailure": {
+            "retryOnFailure": {
               "value": false
             },
-            "retryOnFailure": {
+            "continueOnFailure": {
               "value": false
             }
           }
         }
-      },
-      "lastUpdatedDate": "2026-03-30T19:09:28.087Z",
-      "type": "PIECE_TRIGGER",
-      "settings": {
-        "propertySettings": {
-          "authType": {
-            "type": "MANUAL"
-          },
-          "authFields": {
-            "type": "MANUAL",
-            "schema": {}
-          },
-          "liveMarkdown": {
-            "type": "MANUAL"
-          },
-          "syncMarkdown": {
-            "type": "MANUAL"
-          },
-          "testMarkdown": {
-            "type": "MANUAL"
-          }
-        },
-        "pieceName": "@activepieces/piece-webhook",
-        "pieceVersion": "0.1.32",
-        "triggerName": "catch_webhook",
-        "input": {
-          "authType": "none",
-          "authFields": {},
-          "liveMarkdown": "",
-          "syncMarkdown": "",
-          "testMarkdown": ""
-        }
       }
     },
-    "updatedBy": "r6l6kXh9PlyaBeG0xgrtE",
+    "updatedBy": null,
     "valid": true,
-    "schemaVersion": "18",
+    "schemaVersion": "21",
     "agentIds": [],
     "state": "LOCKED",
     "connectionIds": [],
