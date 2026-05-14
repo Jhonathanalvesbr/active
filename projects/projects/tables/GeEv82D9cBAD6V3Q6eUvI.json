@@ -1,0 +1,12 @@
+{
+  "id": "CHwEC2lSn9AvFNEOUSd8e",
+  "name": "Nova Tabela",
+  "externalId": "GeEv82D9cBAD6V3Q6eUvI",
+  "fields": [
+    {
+      "name": "Name",
+      "type": "TEXT",
+      "externalId": "ofW5nyuKdq0GsDthi3n97"
+    }
+  ]
+}
