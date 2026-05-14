@@ -1,0 +1,123 @@
+{
+  "id": "EBgtoCA8U8G3J0bWziOqu",
+  "created": "2026-05-12T19:42:45.317Z",
+  "updated": "2026-05-14T14:29:20.605Z",
+  "projectId": "zTx06auQXvjwGabOmUJzt",
+  "externalId": "oZxcN7mLl82fMEuX5bTrB",
+  "ownerId": "DDjefA0l2RHN9VYVy9MQ7",
+  "folderId": "REmSZGWP72dZAeHSTsmzd",
+  "status": "ENABLED",
+  "publishedVersionId": "ta1GxU9vfJ2cFjPAaZwFL",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "ta1GxU9vfJ2cFjPAaZwFL",
+    "created": "2026-05-12T19:46:09.102Z",
+    "updated": "2026-05-12T19:46:22.905Z",
+    "flowId": "EBgtoCA8U8G3J0bWziOqu",
+    "displayName": "sem nome",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Web Form",
+      "lastUpdatedDate": "2026-05-12T19:46:19.679Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "about": "",
+          "inputs": [
+            {
+              "type": "text",
+              "required": false,
+              "description": "descricao",
+              "displayName": "entrada"
+            },
+            {
+              "type": "text_area",
+              "required": false,
+              "description": "",
+              "displayName": "dois"
+            },
+            {
+              "type": "file",
+              "required": false,
+              "description": "",
+              "displayName": "tres"
+            },
+            {
+              "type": "toggle",
+              "required": true,
+              "description": "",
+              "displayName": "quatro"
+            }
+          ],
+          "response": "",
+          "waitForResponse": false
+        },
+        "pieceName": "@activepieces/piece-forms",
+        "triggerName": "form_submission",
+        "pieceVersion": "0.4.14",
+        "propertySettings": {
+          "about": {
+            "type": "MANUAL"
+          },
+          "inputs": {
+            "type": "MANUAL"
+          },
+          "response": {
+            "type": "MANUAL"
+          },
+          "waitForResponse": {
+            "type": "MANUAL"
+          }
+        }
+      },
+      "nextAction": {
+        "name": "step_1",
+        "valid": true,
+        "displayName": "Respond on UI",
+        "skip": false,
+        "lastUpdatedDate": "2026-05-12T19:46:09.119Z",
+        "type": "PIECE",
+        "settings": {
+          "input": {
+            "file": "",
+            "markdown": "heloo"
+          },
+          "pieceName": "@activepieces/piece-forms",
+          "actionName": "return_response",
+          "pieceVersion": "0.4.14",
+          "propertySettings": {
+            "file": {
+              "type": "MANUAL"
+            },
+            "markdown": {
+              "type": "MANUAL"
+            }
+          },
+          "errorHandlingOptions": {
+            "retryOnFailure": {
+              "value": false
+            },
+            "continueOnFailure": {
+              "value": false
+            }
+          }
+        }
+      }
+    },
+    "updatedBy": "DDjefA0l2RHN9VYVy9MQ7",
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "id": "DAd8Eda60AOS5Aqby3jzM",
+  "created": "2026-05-12T19:25:21.140Z",
+  "updated": "2026-05-14T14:56:06.217Z",
+  "projectId": "zTx06auQXvjwGabOmUJzt",
+  "externalId": "Ue4XroX8GUCdYCrtP8AIH",
+  "ownerId": "DDjefA0l2RHN9VYVy9MQ7",
+  "folderId": "REmSZGWP72dZAeHSTsmzd",
+  "status": "ENABLED",
+  "publishedVersionId": "zZn6IKLbce7BTEyoFC5q1",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "zZn6IKLbce7BTEyoFC5q1",
+    "created": "2026-05-12T19:38:13.243Z",
+    "updated": "2026-05-12T19:38:14.498Z",
+    "flowId": "DAd8Eda60AOS5Aqby3jzM",
+    "displayName": "Teste",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Chat UI",
+      "lastUpdatedDate": "2026-05-12T19:38:13.263Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "about": "",
+          "botName": "AI Bot",
+          "responseMarkdown": ""
+        },
+        "pieceName": "@activepieces/piece-forms",
+        "triggerName": "chat_submission",
+        "pieceVersion": "0.4.14",
+        "propertySettings": {
+          "about": {
+            "type": "MANUAL"
+          },
+          "botName": {
+            "type": "MANUAL"
+          },
+          "responseMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      },
+      "nextAction": {
+        "name": "step_2",
+        "valid": true,
+        "displayName": "Run Agent",
+        "skip": false,
+        "lastUpdatedDate": "2026-05-12T19:38:13.263Z",
+        "type": "PIECE",
+        "settings": {
+          "input": {
+            "prompt": "Você é um especialista em construção de fluxos\n---\n{{trigger['message']}}",
+            "maxSteps": 20,
+            "webSearch": false,
+            "agentTools": [
+              {
+                "auth": {
+                  "type": "access_token",
+                  "accessToken": "l2o2M6hzK5Lzcsq3wvnQhDJRxkv90BYg328ghVBnQkbAkpirK7pA9muGdk5LBAKkzEjdfmXH"
+                },
+                "type": "MCP",
+                "protocol": "streamable-http",
+                "toolName": "teste-mcp",
+                "serverUrl": "https://app.projetos.xvia.app.onlinetechsolucoes.com.br/mcp"
+              }
+            ],
+            "aiProviderModel": {
+              "model": "gpt-5-mini",
+              "provider": "openai"
+            },
+            "structuredOutput": [],
+            "webSearchOptions": null
+          },
+          "pieceName": "@activepieces/piece-ai",
+          "actionName": "run_agent",
+          "sampleData": {
+            "lastTestDate": "2026-05-12T19:31:27.590Z",
+            "sampleDataFileId": "GHaMHCxlO1Ca437HRMg6f",
+            "sampleDataInputFileId": "q2IElsXbDeaQhSHHAM2NY"
+          },
+          "pieceVersion": "0.4.0",
+          "propertySettings": {
+            "prompt": {
+              "type": "MANUAL"
+            },
+            "maxSteps": {
+              "type": "MANUAL"
+            },
+            "webSearch": {
+              "type": "MANUAL"
+            },
+            "agentTools": {
+              "type": "MANUAL"
+            },
+            "aiProviderModel": {
+              "type": "MANUAL"
+            },
+            "structuredOutput": {
+              "type": "MANUAL"
+            },
+            "webSearchOptions": {
+              "type": "MANUAL"
+            }
+          },
+          "errorHandlingOptions": {
+            "retryOnFailure": {
+              "value": false
+            },
+            "continueOnFailure": {
+              "value": false
+            }
+          }
+        },
+        "nextAction": {
+          "name": "step_3",
+          "valid": true,
+          "displayName": "Code",
+          "skip": false,
+          "lastUpdatedDate": "2026-05-12T19:38:13.264Z",
+          "type": "CODE",
+          "settings": {
+            "input": {
+              "ai": "{{step_2}}"
+            },
+            "sampleData": {
+              "lastTestDate": "2026-05-12T19:36:22.860Z",
+              "sampleDataFileId": "MaQecP81yVloqYt3zQPgB",
+              "sampleDataInputFileId": "h214AC9o8h7brozNGiOXY"
+            },
+            "sourceCode": {
+              "code": "export const code = async (inputs) => {\n  return inputs.ai.steps.at(-1).markdown;\n};",
+              "packageJson": "{}"
+            },
+            "errorHandlingOptions": {
+              "retryOnFailure": {
+                "value": false
+              },
+              "continueOnFailure": {
+                "value": false
+              }
+            }
+          },
+          "nextAction": {
+            "name": "step_1",
+            "valid": true,
+            "displayName": "Respond on UI",
+            "skip": false,
+            "lastUpdatedDate": "2026-05-12T19:38:13.264Z",
+            "type": "PIECE",
+            "settings": {
+              "input": {
+                "file": "",
+                "markdown": "{{step_3}}"
+              },
+              "pieceName": "@activepieces/piece-forms",
+              "actionName": "return_response",
+              "pieceVersion": "0.4.14",
+              "propertySettings": {
+                "file": {
+                  "type": "MANUAL"
+                },
+                "markdown": {
+                  "type": "MANUAL"
+                }
+              },
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "updatedBy": "DDjefA0l2RHN9VYVy9MQ7",
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}
