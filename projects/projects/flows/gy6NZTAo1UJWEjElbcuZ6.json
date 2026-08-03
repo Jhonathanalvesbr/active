@@ -1,0 +1,70 @@
+{
+  "id": "vo45Ug5V17rAM3HskGQPg",
+  "created": "2026-08-03T17:46:51.642Z",
+  "updated": "2026-08-03T17:47:05.101Z",
+  "projectId": "YAXr5BnXAFcF5VLYVRPG9",
+  "externalId": "gy6NZTAo1UJWEjElbcuZ6",
+  "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "Zfjw6SLQfEZXKqzdtjteS",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "Zfjw6SLQfEZXKqzdtjteS",
+    "created": "2026-08-03T17:46:51.647Z",
+    "updated": "2026-08-03T17:47:04.944Z",
+    "flowId": "vo45Ug5V17rAM3HskGQPg",
+    "displayName": "novo projeto",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Capturar Webhook",
+      "lastUpdatedDate": "2026-08-03T17:47:03.984Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "authType": "none",
+          "authFields": {},
+          "liveMarkdown": "",
+          "syncMarkdown": "",
+          "testMarkdown": ""
+        },
+        "pieceName": "@activepieces/piece-webhook",
+        "triggerName": "catch_webhook",
+        "pieceVersion": "0.1.32",
+        "propertySettings": {
+          "authType": {
+            "type": "MANUAL"
+          },
+          "authFields": {
+            "type": "MANUAL",
+            "schema": {}
+          },
+          "liveMarkdown": {
+            "type": "MANUAL"
+          },
+          "syncMarkdown": {
+            "type": "MANUAL"
+          },
+          "testMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      }
+    },
+    "updatedBy": "2fiQRi0Bx39cUGTxfoCnn",
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}
