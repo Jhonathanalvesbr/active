@@ -1,28 +1,28 @@
 {
   "id": "l35kVDgmCb0QwsqfPKsfF",
   "created": "2026-08-03T17:42:29.631Z",
-  "updated": "2026-08-03T17:42:31.036Z",
+  "updated": "2026-08-03T17:45:38.111Z",
   "projectId": "YAXr5BnXAFcF5VLYVRPG9",
   "externalId": "oZxcN7mLl82fMEuX5bTrB",
   "ownerId": null,
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "OAQ9GlpXU6OMswNPUwL2x",
+  "publishedVersionId": "O3wodJFcUlCb5fDeqHt1O",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "OAQ9GlpXU6OMswNPUwL2x",
-    "created": "2026-08-03T17:42:29.669Z",
-    "updated": "2026-08-03T17:42:29.883Z",
+    "id": "O3wodJFcUlCb5fDeqHt1O",
+    "created": "2026-08-03T17:45:35.369Z",
+    "updated": "2026-08-03T17:45:37.888Z",
     "flowId": "l35kVDgmCb0QwsqfPKsfF",
-    "displayName": "sem nome",
+    "displayName": "nome alterado",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Web Form",
-      "lastUpdatedDate": "2026-08-03T17:42:29.719Z",
+      "lastUpdatedDate": "2026-08-03T17:45:35.380Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -79,7 +79,7 @@
         "valid": true,
         "displayName": "Respond on UI",
         "skip": false,
-        "lastUpdatedDate": "2026-08-03T17:42:29.719Z",
+        "lastUpdatedDate": "2026-08-03T17:45:35.381Z",
         "type": "PIECE",
         "settings": {
           "input": {
@@ -108,7 +108,7 @@
         }
       }
     },
-    "updatedBy": null,
+    "updatedBy": "2fiQRi0Bx39cUGTxfoCnn",
     "valid": true,
     "schemaVersion": "21",
     "agentIds": [],
