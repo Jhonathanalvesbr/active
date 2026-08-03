@@ -1,0 +1,98 @@
+{
+  "id": "CLolVj8TrvQEr8IoadD6H",
+  "created": "2026-07-30T17:42:58.249Z",
+  "updated": "2026-08-03T17:11:41.577Z",
+  "projectId": "YAXr5BnXAFcF5VLYVRPG9",
+  "externalId": "YChXk5zLKwp359HBMjRNA",
+  "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "6kHOwZcify8lbHc4z9luK",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": 3600,
+  "templateId": null,
+  "version": {
+    "id": "6kHOwZcify8lbHc4z9luK",
+    "created": "2026-07-30T17:42:58.259Z",
+    "updated": "2026-07-30T17:51:13.032Z",
+    "flowId": "CLolVj8TrvQEr8IoadD6H",
+    "displayName": "Sem Título",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Interface do Chat",
+      "lastUpdatedDate": "2026-07-30T17:43:12.068Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "about": "",
+          "botName": "AI Bot",
+          "responseMarkdown": ""
+        },
+        "pieceName": "@activepieces/piece-forms",
+        "sampleData": {
+          "lastTestDate": "2026-07-30T17:50:29.540Z",
+          "sampleDataFileId": "oZTTSPOZCvgiEKQyRrsAY"
+        },
+        "triggerName": "chat_submission",
+        "pieceVersion": "0.4.14",
+        "propertySettings": {
+          "about": {
+            "type": "MANUAL"
+          },
+          "botName": {
+            "type": "MANUAL"
+          },
+          "responseMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      },
+      "nextAction": {
+        "name": "step_1",
+        "valid": true,
+        "displayName": "Responder na interface",
+        "skip": false,
+        "lastUpdatedDate": "2026-07-30T17:51:12.163Z",
+        "type": "PIECE",
+        "settings": {
+          "input": {
+            "file": "",
+            "markdown": "{{trigger.message}}"
+          },
+          "pieceName": "@activepieces/piece-forms",
+          "actionName": "return_response",
+          "pieceVersion": "0.4.14",
+          "propertySettings": {
+            "file": {
+              "type": "MANUAL"
+            },
+            "markdown": {
+              "type": "MANUAL"
+            }
+          },
+          "errorHandlingOptions": {
+            "retryOnFailure": {
+              "value": false
+            },
+            "continueOnFailure": {
+              "value": false
+            }
+          }
+        }
+      }
+    },
+    "updatedBy": "2fiQRi0Bx39cUGTxfoCnn",
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}
