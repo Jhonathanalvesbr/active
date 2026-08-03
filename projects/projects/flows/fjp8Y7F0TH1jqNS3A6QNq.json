@@ -1,28 +1,28 @@
 {
   "id": "PFL1lITnF5Hnt1jmwORUV",
   "created": "2026-08-03T17:26:17.014Z",
-  "updated": "2026-08-03T17:26:25.073Z",
+  "updated": "2026-08-03T19:09:19.465Z",
   "projectId": "YAXr5BnXAFcF5VLYVRPG9",
   "externalId": "fjp8Y7F0TH1jqNS3A6QNq",
   "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "gxt0afuECgSgoqpF7RuHQ",
+  "publishedVersionId": "98qwl76Yndj7mh2FC4rVf",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "gxt0afuECgSgoqpF7RuHQ",
-    "created": "2026-08-03T17:26:17.018Z",
-    "updated": "2026-08-03T17:26:19.307Z",
+    "id": "98qwl76Yndj7mh2FC4rVf",
+    "created": "2026-08-03T19:07:58.063Z",
+    "updated": "2026-08-03T19:09:19.316Z",
     "flowId": "PFL1lITnF5Hnt1jmwORUV",
-    "displayName": "Sem Título",
+    "displayName": "Webhook",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
-      "lastUpdatedDate": "2026-08-03T17:26:17.088Z",
+      "lastUpdatedDate": "2026-08-03T19:07:58.074Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -56,19 +56,19 @@
         "valid": true,
         "displayName": "Adicionar linha",
         "skip": false,
-        "lastUpdatedDate": "2026-08-03T17:26:17.088Z",
+        "lastUpdatedDate": "2026-08-03T19:07:58.075Z",
         "type": "PIECE",
         "settings": {
           "input": {
-            "auth": "{{connections['1nNKYujLvK2HO6tJjhst4']}}",
+            "auth": "{{connections['2kUTXow33muKSl7hIfgAG']}}",
             "values": {
               "values": [
-                "teste"
+                "1"
               ]
             },
             "sheetId": 0,
             "as_string": false,
-            "spreadsheetId": "12DApATdptWF2LOyt7PAT8e5aTwpgMzkiTvdjxhGJpX4",
+            "spreadsheetId": "1eLaIivekYnqbv651snUpq-GH5Vxnwk2BRbXPBr7PIRc",
             "first_row_headers": false,
             "includeTeamDrives": false
           },
@@ -111,6 +111,67 @@
               "value": false
             }
           }
+        },
+        "nextAction": {
+          "name": "step_2",
+          "valid": true,
+          "displayName": "Retornar Resposta",
+          "skip": false,
+          "lastUpdatedDate": "2026-08-03T19:07:58.075Z",
+          "type": "PIECE",
+          "settings": {
+            "input": {
+              "fields": {
+                "body": {
+                  "status": 200
+                },
+                "status": 200,
+                "headers": {}
+              },
+              "respond": "stop",
+              "responseType": "json"
+            },
+            "pieceName": "@activepieces/piece-webhook",
+            "actionName": "return_response",
+            "pieceVersion": "0.1.32",
+            "propertySettings": {
+              "fields": {
+                "type": "MANUAL",
+                "schema": {
+                  "body": {
+                    "type": "JSON",
+                    "required": true,
+                    "displayName": "JSON Body"
+                  },
+                  "status": {
+                    "type": "NUMBER",
+                    "required": false,
+                    "displayName": "Status",
+                    "defaultValue": 200
+                  },
+                  "headers": {
+                    "type": "OBJECT",
+                    "required": false,
+                    "displayName": "Headers"
+                  }
+                }
+              },
+              "respond": {
+                "type": "MANUAL"
+              },
+              "responseType": {
+                "type": "MANUAL"
+              }
+            },
+            "errorHandlingOptions": {
+              "retryOnFailure": {
+                "value": false
+              },
+              "continueOnFailure": {
+                "value": false
+              }
+            }
+          }
         }
       }
     },
@@ -120,7 +181,7 @@
     "agentIds": [],
     "state": "LOCKED",
     "connectionIds": [
-      "1nNKYujLvK2HO6tJjhst4"
+      "2kUTXow33muKSl7hIfgAG"
     ],
     "backupFiles": null,
     "notes": []
