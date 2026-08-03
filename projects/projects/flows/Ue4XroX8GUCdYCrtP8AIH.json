@@ -1,28 +1,28 @@
 {
-  "id": "DAd8Eda60AOS5Aqby3jzM",
-  "created": "2026-05-12T19:25:21.140Z",
-  "updated": "2026-05-14T14:56:06.217Z",
-  "projectId": "zTx06auQXvjwGabOmUJzt",
+  "id": "KtGrCsbYmzAtYRyUYkJCm",
+  "created": "2026-08-03T17:42:29.450Z",
+  "updated": "2026-08-03T17:42:31.414Z",
+  "projectId": "YAXr5BnXAFcF5VLYVRPG9",
   "externalId": "Ue4XroX8GUCdYCrtP8AIH",
-  "ownerId": "DDjefA0l2RHN9VYVy9MQ7",
-  "folderId": "REmSZGWP72dZAeHSTsmzd",
+  "ownerId": null,
+  "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "zZn6IKLbce7BTEyoFC5q1",
+  "publishedVersionId": "Dv6hQX3HhZdK3aU0Khz5e",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "zZn6IKLbce7BTEyoFC5q1",
-    "created": "2026-05-12T19:38:13.243Z",
-    "updated": "2026-05-12T19:38:14.498Z",
-    "flowId": "DAd8Eda60AOS5Aqby3jzM",
+    "id": "Dv6hQX3HhZdK3aU0Khz5e",
+    "created": "2026-08-03T17:42:29.453Z",
+    "updated": "2026-08-03T17:42:29.585Z",
+    "flowId": "KtGrCsbYmzAtYRyUYkJCm",
     "displayName": "Teste",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Chat UI",
-      "lastUpdatedDate": "2026-05-12T19:38:13.263Z",
+      "lastUpdatedDate": "2026-08-03T17:42:29.489Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -50,7 +50,7 @@
         "valid": true,
         "displayName": "Run Agent",
         "skip": false,
-        "lastUpdatedDate": "2026-05-12T19:38:13.263Z",
+        "lastUpdatedDate": "2026-08-03T17:42:29.489Z",
         "type": "PIECE",
         "settings": {
           "input": {
@@ -121,7 +121,7 @@
           "valid": true,
           "displayName": "Code",
           "skip": false,
-          "lastUpdatedDate": "2026-05-12T19:38:13.264Z",
+          "lastUpdatedDate": "2026-08-03T17:42:29.490Z",
           "type": "CODE",
           "settings": {
             "input": {
@@ -150,7 +150,7 @@
             "valid": true,
             "displayName": "Respond on UI",
             "skip": false,
-            "lastUpdatedDate": "2026-05-12T19:38:13.264Z",
+            "lastUpdatedDate": "2026-08-03T17:42:29.490Z",
             "type": "PIECE",
             "settings": {
               "input": {
@@ -181,7 +181,7 @@
         }
       }
     },
-    "updatedBy": "DDjefA0l2RHN9VYVy9MQ7",
+    "updatedBy": null,
     "valid": true,
     "schemaVersion": "21",
     "agentIds": [],

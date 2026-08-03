@@ -1,28 +1,28 @@
 {
-  "id": "1toO7R1Vt5vRYZ8l2AwCd",
-  "created": "2026-05-12T13:24:54.481Z",
-  "updated": "2026-05-12T13:24:54.276Z",
-  "projectId": "zTx06auQXvjwGabOmUJzt",
+  "id": "TiK6vVdEYhAU89i9TOZkL",
+  "created": "2026-08-03T17:42:29.513Z",
+  "updated": "2026-08-03T17:42:30.034Z",
+  "projectId": "YAXr5BnXAFcF5VLYVRPG9",
   "externalId": "kOwJ6qSgl3LmrrPKWIOHF",
   "ownerId": null,
   "folderId": null,
-  "status": "DISABLED",
-  "publishedVersionId": "1FSoktStaDoHQZBY1ut7s",
+  "status": "ENABLED",
+  "publishedVersionId": "br6Z6fqF3lS5MbIU0nUz9",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "1FSoktStaDoHQZBY1ut7s",
-    "created": "2026-05-12T13:24:54.492Z",
-    "updated": "2026-05-12T13:24:54.327Z",
-    "flowId": "1toO7R1Vt5vRYZ8l2AwCd",
+    "id": "br6Z6fqF3lS5MbIU0nUz9",
+    "created": "2026-08-03T17:42:29.553Z",
+    "updated": "2026-08-03T17:42:29.715Z",
+    "flowId": "TiK6vVdEYhAU89i9TOZkL",
     "displayName": "Sem T^ tulo teste teste ssfe - Copy",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
-      "lastUpdatedDate": "2026-05-12T13:24:54.286Z",
+      "lastUpdatedDate": "2026-08-03T17:42:29.589Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -59,7 +59,7 @@
         "valid": true,
         "displayName": "Adicionar linha",
         "skip": false,
-        "lastUpdatedDate": "2026-05-12T13:24:54.287Z",
+        "lastUpdatedDate": "2026-08-03T17:42:29.590Z",
         "type": "PIECE",
         "settings": {
           "input": {
@@ -120,7 +120,7 @@
           "valid": true,
           "displayName": "Retornar Resposta",
           "skip": false,
-          "lastUpdatedDate": "2026-05-12T13:24:54.290Z",
+          "lastUpdatedDate": "2026-08-03T17:42:29.590Z",
           "type": "PIECE",
           "settings": {
             "input": {

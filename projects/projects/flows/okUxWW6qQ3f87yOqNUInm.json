@@ -1,28 +1,28 @@
 {
   "id": "0rlVeZE83r7I38dG317S6",
   "created": "2026-07-30T13:38:22.119Z",
-  "updated": "2026-08-03T17:11:38.969Z",
+  "updated": "2026-08-03T17:42:31.308Z",
   "projectId": "YAXr5BnXAFcF5VLYVRPG9",
   "externalId": "okUxWW6qQ3f87yOqNUInm",
   "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "Zxy0bU9GH2eSEFQKRIcgd",
+  "publishedVersionId": "jVk9XoFBJne3TdS0nA3j6",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": 3600,
   "templateId": null,
   "version": {
-    "id": "Zxy0bU9GH2eSEFQKRIcgd",
-    "created": "2026-07-30T13:39:44.967Z",
-    "updated": "2026-07-30T13:40:01.788Z",
+    "id": "jVk9XoFBJne3TdS0nA3j6",
+    "created": "2026-07-30T17:13:29.086Z",
+    "updated": "2026-08-03T17:42:31.038Z",
     "flowId": "0rlVeZE83r7I38dG317S6",
     "displayName": "Sem Título",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
-      "lastUpdatedDate": "2026-07-30T13:39:45.047Z",
+      "lastUpdatedDate": "2026-08-03T17:42:30.025Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -33,6 +33,10 @@
           "testMarkdown": ""
         },
         "pieceName": "@activepieces/piece-webhook",
+        "sampleData": {
+          "lastTestDate": "2026-07-30T17:13:29.126Z",
+          "sampleDataFileId": "MUsLAqvx3I8gkCLehzOfY"
+        },
         "triggerName": "catch_webhook",
         "pieceVersion": "0.1.32",
         "propertySettings": {
@@ -59,7 +63,7 @@
         "valid": true,
         "displayName": "Enviar e-mail",
         "skip": false,
-        "lastUpdatedDate": "2026-07-30T13:39:44.978Z",
+        "lastUpdatedDate": "2026-08-03T17:42:30.025Z",
         "type": "PIECE",
         "settings": {
           "input": {
@@ -135,7 +139,7 @@
           "valid": true,
           "displayName": "Retornar Resposta",
           "skip": false,
-          "lastUpdatedDate": "2026-07-30T13:39:59.554Z",
+          "lastUpdatedDate": "2026-08-03T17:42:30.025Z",
           "type": "PIECE",
           "settings": {
             "input": {

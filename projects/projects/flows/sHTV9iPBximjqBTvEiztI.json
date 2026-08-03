@@ -1,28 +1,28 @@
 {
-  "id": "t4NhEufzuOo75L34bpE0N",
-  "created": "2026-05-14T19:27:54.624Z",
-  "updated": "2026-05-14T19:38:16.427Z",
-  "projectId": "zTx06auQXvjwGabOmUJzt",
+  "id": "4BZkBD5w2nTa5R7fICoeo",
+  "created": "2026-08-03T17:42:29.764Z",
+  "updated": "2026-08-03T17:42:31.021Z",
+  "projectId": "YAXr5BnXAFcF5VLYVRPG9",
   "externalId": "sHTV9iPBximjqBTvEiztI",
-  "ownerId": "KfXFS3mHWdiC4DiMDEWaw",
+  "ownerId": null,
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "C0JX5TszOBS5xQH5VDlUl",
+  "publishedVersionId": "apw6vOR2ncNGwXF6sqlX7",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "C0JX5TszOBS5xQH5VDlUl",
-    "created": "2026-05-14T19:37:39.103Z",
-    "updated": "2026-05-14T19:38:16.292Z",
-    "flowId": "t4NhEufzuOo75L34bpE0N",
+    "id": "apw6vOR2ncNGwXF6sqlX7",
+    "created": "2026-08-03T17:42:29.843Z",
+    "updated": "2026-08-03T17:42:30.052Z",
+    "flowId": "4BZkBD5w2nTa5R7fICoeo",
     "displayName": "teste - Copy",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Catch Webhook",
-      "lastUpdatedDate": "2026-05-14T19:37:39.152Z",
+      "lastUpdatedDate": "2026-08-03T17:42:29.883Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -59,7 +59,7 @@
         "valid": true,
         "displayName": "Adicionar linha",
         "skip": false,
-        "lastUpdatedDate": "2026-05-14T19:37:39.152Z",
+        "lastUpdatedDate": "2026-08-03T17:42:29.884Z",
         "type": "PIECE",
         "settings": {
           "input": {
@@ -120,7 +120,7 @@
           "valid": true,
           "displayName": "Return Response",
           "skip": false,
-          "lastUpdatedDate": "2026-05-14T19:37:39.152Z",
+          "lastUpdatedDate": "2026-08-03T17:42:29.884Z",
           "type": "PIECE",
           "settings": {
             "input": {
@@ -179,7 +179,7 @@
         }
       }
     },
-    "updatedBy": "KfXFS3mHWdiC4DiMDEWaw",
+    "updatedBy": null,
     "valid": true,
     "schemaVersion": "21",
     "agentIds": [],
