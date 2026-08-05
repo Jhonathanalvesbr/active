@@ -1,0 +1,105 @@
+{
+  "id": "rORSjkObRAJirsJokxfqa",
+  "created": "2026-08-03T20:00:35.001Z",
+  "updated": "2026-08-03T20:00:35.751Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
+  "externalId": "f0XA5zKdONA4oQIWdZO3r",
+  "ownerId": null,
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "u2rAAjAqs0dLljbv6pBHF",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "u2rAAjAqs0dLljbv6pBHF",
+    "created": "2026-08-03T20:00:35.013Z",
+    "updated": "2026-08-03T20:00:35.124Z",
+    "flowId": "rORSjkObRAJirsJokxfqa",
+    "displayName": "Formulário",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Formulário Web",
+      "lastUpdatedDate": "2026-08-03T20:00:35.046Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "about": "",
+          "inputs": [
+            {
+              "type": "text_area",
+              "required": false,
+              "description": "Digite seu nome",
+              "displayName": "Nome"
+            }
+          ],
+          "response": "",
+          "waitForResponse": true
+        },
+        "pieceName": "@activepieces/piece-forms",
+        "triggerName": "form_submission",
+        "pieceVersion": "0.4.14",
+        "propertySettings": {
+          "about": {
+            "type": "MANUAL"
+          },
+          "inputs": {
+            "type": "MANUAL"
+          },
+          "response": {
+            "type": "MANUAL"
+          },
+          "waitForResponse": {
+            "type": "MANUAL"
+          }
+        }
+      },
+      "nextAction": {
+        "name": "step_1",
+        "valid": true,
+        "displayName": "Responder na interface",
+        "skip": false,
+        "lastUpdatedDate": "2026-08-03T20:00:35.046Z",
+        "type": "PIECE",
+        "settings": {
+          "input": {
+            "file": "",
+            "markdown": "Tudo certo!"
+          },
+          "pieceName": "@activepieces/piece-forms",
+          "actionName": "return_response",
+          "pieceVersion": "0.4.14",
+          "propertySettings": {
+            "file": {
+              "type": "MANUAL"
+            },
+            "markdown": {
+              "type": "MANUAL"
+            }
+          },
+          "errorHandlingOptions": {
+            "retryOnFailure": {
+              "value": false
+            },
+            "continueOnFailure": {
+              "value": false
+            }
+          }
+        }
+      }
+    },
+    "updatedBy": null,
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}

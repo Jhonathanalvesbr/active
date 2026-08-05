@@ -1,0 +1,287 @@
+{
+  "id": "bAz5Sse1UclzhsL1kgwg6",
+  "created": "2026-08-04T12:48:13.796Z",
+  "updated": "2026-08-04T13:33:14.429Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
+  "externalId": "qvAOY7G3Z2u9DwtVUdyav",
+  "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "Cry6MetqAs7iMcCJvlpC4",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "Cry6MetqAs7iMcCJvlpC4",
+    "created": "2026-08-04T13:33:13.387Z",
+    "updated": "2026-08-04T13:33:14.074Z",
+    "flowId": "bAz5Sse1UclzhsL1kgwg6",
+    "displayName": "X-Forms",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Capturar Webhook",
+      "lastUpdatedDate": "2026-08-04T13:33:13.397Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "authType": "none",
+          "authFields": {}
+        },
+        "pieceName": "@activepieces/piece-webhook",
+        "triggerName": "catch_webhook",
+        "pieceVersion": "0.1.32",
+        "propertySettings": {
+          "authType": {
+            "type": "MANUAL"
+          },
+          "authFields": {
+            "type": "MANUAL",
+            "schema": {}
+          },
+          "liveMarkdown": {
+            "type": "MANUAL"
+          },
+          "syncMarkdown": {
+            "type": "MANUAL"
+          },
+          "testMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      },
+      "nextAction": {
+        "name": "step_3",
+        "valid": true,
+        "displayName": "Converter JSON para CSV",
+        "lastUpdatedDate": "2026-08-04T13:33:13.397Z",
+        "type": "PIECE",
+        "settings": {
+          "input": {
+            "markdown": "",
+            "json_array": "[{{trigger['body']}}]",
+            "delimiter_type": ","
+          },
+          "pieceName": "@activepieces/piece-csv",
+          "actionName": "convert_json_to_csv",
+          "sampleData": {
+            "lastTestDate": "2026-08-04T13:03:12.230Z",
+            "sampleDataFileId": "3g3dPnY5XoHr7wDiDnzU8",
+            "sampleDataInputFileId": "0ipvetaqHPxyGRfmHalqk"
+          },
+          "pieceVersion": "0.4.13",
+          "propertySettings": {
+            "markdown": {
+              "type": "MANUAL"
+            },
+            "json_array": {
+              "type": "DYNAMIC"
+            },
+            "delimiter_type": {
+              "type": "MANUAL"
+            }
+          },
+          "errorHandlingOptions": {
+            "retryOnFailure": {
+              "value": false
+            },
+            "continueOnFailure": {
+              "value": false
+            }
+          }
+        },
+        "nextAction": {
+          "name": "step_4",
+          "valid": true,
+          "displayName": "Code",
+          "skip": false,
+          "lastUpdatedDate": "2026-08-04T13:33:13.413Z",
+          "type": "CODE",
+          "settings": {
+            "input": {
+              "file": "{{step_3}}"
+            },
+            "sampleData": {
+              "lastTestDate": "2026-08-04T13:20:16.356Z",
+              "sampleDataFileId": "xX2svroY4Z9k3xn02tfBG",
+              "sampleDataInputFileId": "uyCB6iNsW20sFnsNQuxVw"
+            },
+            "sourceCode": {
+              "code": "export const code = async (inputs: { file: string }) => {\n  return {\n    base64: `data:text/csv;base64,${Buffer.from(inputs.file).toString('base64')}`\n  };\n};",
+              "packageJson": "{}"
+            },
+            "errorHandlingOptions": {
+              "retryOnFailure": {
+                "value": false
+              },
+              "continueOnFailure": {
+                "value": false
+              }
+            }
+          },
+          "nextAction": {
+            "name": "step_1",
+            "valid": true,
+            "displayName": "Enviar e-mail",
+            "lastUpdatedDate": "2026-08-04T13:33:13.398Z",
+            "type": "PIECE",
+            "settings": {
+              "input": {
+                "cc": [],
+                "bcc": [],
+                "auth": "{{connections['CKTxgQgqFJMHaVYXeoLll']}}",
+                "body": "Aqui está uma cópia da sua resposta.",
+                "from": "",
+                "draft": false,
+                "subject": "Resposta do formulário",
+                "receiver": [
+                  "{{trigger['body']['email']}}"
+                ],
+                "reply_to": [],
+                "body_type": "plain_text",
+                "attachments": [
+                  {
+                    "file": "{{step_4['base64']}}",
+                    "name": "formulario.csv"
+                  }
+                ],
+                "in_reply_to": "",
+                "sender_name": ""
+              },
+              "pieceName": "@activepieces/piece-gmail",
+              "actionName": "send_email",
+              "sampleData": {
+                "lastTestDate": "2026-08-04T13:20:19.217Z",
+                "sampleDataFileId": "A2izLdlo8JglyWBDYB7Wm",
+                "sampleDataInputFileId": "x865Xlwei0LuwoUmKXz4j"
+              },
+              "pieceVersion": "0.12.1",
+              "propertySettings": {
+                "cc": {
+                  "type": "MANUAL"
+                },
+                "bcc": {
+                  "type": "MANUAL"
+                },
+                "body": {
+                  "type": "MANUAL"
+                },
+                "from": {
+                  "type": "MANUAL"
+                },
+                "draft": {
+                  "type": "MANUAL"
+                },
+                "subject": {
+                  "type": "MANUAL"
+                },
+                "receiver": {
+                  "type": "MANUAL"
+                },
+                "reply_to": {
+                  "type": "MANUAL"
+                },
+                "body_type": {
+                  "type": "MANUAL"
+                },
+                "attachments": {
+                  "type": "MANUAL"
+                },
+                "in_reply_to": {
+                  "type": "MANUAL"
+                },
+                "sender_name": {
+                  "type": "MANUAL"
+                }
+              },
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
+              }
+            },
+            "nextAction": {
+              "name": "step_2",
+              "valid": true,
+              "displayName": "Retornar Resposta",
+              "skip": false,
+              "lastUpdatedDate": "2026-08-04T13:33:13.398Z",
+              "type": "PIECE",
+              "settings": {
+                "input": {
+                  "fields": {
+                    "body": {
+                      "status": 200
+                    },
+                    "status": 200,
+                    "headers": {}
+                  },
+                  "respond": "stop",
+                  "responseType": "json"
+                },
+                "pieceName": "@activepieces/piece-webhook",
+                "actionName": "return_response",
+                "sampleData": {},
+                "pieceVersion": "0.1.32",
+                "propertySettings": {
+                  "fields": {
+                    "type": "MANUAL",
+                    "schema": {
+                      "body": {
+                        "type": "JSON",
+                        "required": true,
+                        "displayName": "JSON Body"
+                      },
+                      "status": {
+                        "type": "NUMBER",
+                        "required": false,
+                        "displayName": "Status",
+                        "defaultValue": 200
+                      },
+                      "headers": {
+                        "type": "OBJECT",
+                        "required": false,
+                        "displayName": "Headers"
+                      }
+                    }
+                  },
+                  "respond": {
+                    "type": "MANUAL"
+                  },
+                  "responseType": {
+                    "type": "MANUAL"
+                  }
+                },
+                "errorHandlingOptions": {
+                  "retryOnFailure": {
+                    "value": false
+                  },
+                  "continueOnFailure": {
+                    "value": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "updatedBy": "2fiQRi0Bx39cUGTxfoCnn",
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [
+      "CKTxgQgqFJMHaVYXeoLll"
+    ],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}

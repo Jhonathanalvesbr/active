@@ -1,0 +1,53 @@
+{
+  "id": "Pcu107LFVwpZwlpigkuxq",
+  "created": "2026-08-03T20:00:35.204Z",
+  "updated": "2026-08-03T20:00:35.955Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
+  "externalId": "IpzI3dtI67iMNdODNcy0c",
+  "ownerId": null,
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "O2kKqe8LsZBSRjUc7bPVM",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "O2kKqe8LsZBSRjUc7bPVM",
+    "created": "2026-08-03T20:00:35.221Z",
+    "updated": "2026-08-03T20:00:35.350Z",
+    "flowId": "Pcu107LFVwpZwlpigkuxq",
+    "displayName": "Tabela",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Registro Atualizado",
+      "lastUpdatedDate": "2026-08-03T20:00:35.266Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "table_id": "zDSTqglyrzJc6tJ8ndgOF"
+        },
+        "pieceName": "@activepieces/piece-tables",
+        "triggerName": "updatedRecord",
+        "pieceVersion": "0.3.0",
+        "propertySettings": {
+          "table_id": {
+            "type": "MANUAL"
+          }
+        }
+      }
+    },
+    "updatedBy": null,
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}

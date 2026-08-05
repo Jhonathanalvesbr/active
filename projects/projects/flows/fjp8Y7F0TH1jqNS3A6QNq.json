@@ -1,28 +1,28 @@
 {
-  "id": "PFL1lITnF5Hnt1jmwORUV",
-  "created": "2026-08-03T17:26:17.014Z",
-  "updated": "2026-08-03T19:09:19.465Z",
-  "projectId": "YAXr5BnXAFcF5VLYVRPG9",
+  "id": "6rf6SBgaQA7G4cB5lXycU",
+  "created": "2026-08-03T20:00:35.277Z",
+  "updated": "2026-08-04T18:54:54.690Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
   "externalId": "fjp8Y7F0TH1jqNS3A6QNq",
-  "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
+  "ownerId": null,
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "98qwl76Yndj7mh2FC4rVf",
+  "publishedVersionId": "98Yk9YJkAEBQu2PnSTXYK",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "98qwl76Yndj7mh2FC4rVf",
-    "created": "2026-08-03T19:07:58.063Z",
-    "updated": "2026-08-03T19:09:19.316Z",
-    "flowId": "PFL1lITnF5Hnt1jmwORUV",
+    "id": "98Yk9YJkAEBQu2PnSTXYK",
+    "created": "2026-08-04T18:34:30.200Z",
+    "updated": "2026-08-04T18:54:54.695Z",
+    "flowId": "6rf6SBgaQA7G4cB5lXycU",
     "displayName": "Webhook",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
-      "lastUpdatedDate": "2026-08-03T19:07:58.074Z",
+      "lastUpdatedDate": "2026-08-04T18:40:32.655Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -52,127 +52,312 @@
         }
       },
       "nextAction": {
-        "name": "step_1",
+        "name": "step_3",
         "valid": true,
-        "displayName": "Adicionar linha",
+        "displayName": "Router",
         "skip": false,
-        "lastUpdatedDate": "2026-08-03T19:07:58.075Z",
-        "type": "PIECE",
+        "lastUpdatedDate": "2026-08-04T18:40:32.656Z",
+        "type": "ROUTER",
         "settings": {
-          "input": {
-            "auth": "{{connections['2kUTXow33muKSl7hIfgAG']}}",
-            "values": {
-              "values": [
-                "1"
+          "branches": [
+            {
+              "branchName": "Branch 1",
+              "branchType": "CONDITION",
+              "conditions": [
+                [
+                  {
+                    "operator": "TEXT_EXACTLY_MATCHES",
+                    "firstValue": "{{ Date.now() % 2}}",
+                    "secondValue": "0",
+                    "caseSensitive": false
+                  }
+                ]
               ]
             },
-            "sheetId": 0,
-            "as_string": false,
-            "spreadsheetId": "1eLaIivekYnqbv651snUpq-GH5Vxnwk2BRbXPBr7PIRc",
-            "first_row_headers": false,
-            "includeTeamDrives": false
+            {
+              "branchName": "Otherwise",
+              "branchType": "FALLBACK"
+            }
+          ],
+          "sampleData": {
+            "lastTestDate": "2026-08-04T18:03:25.236Z",
+            "sampleDataFileId": "bwSaWVV7Y25zF4depVFMn",
+            "sampleDataInputFileId": "vW180Cm6FYxSjXBJzAYzA"
           },
-          "pieceName": "@activepieces/piece-google-sheets",
-          "actionName": "insert_row",
-          "sampleData": {},
-          "pieceVersion": "0.14.6",
-          "propertySettings": {
-            "values": {
-              "type": "MANUAL",
-              "schema": {
-                "values": {
-                  "type": "ARRAY",
-                  "required": true,
-                  "displayName": "Row Values"
-                }
-              }
-            },
-            "sheetId": {
-              "type": "MANUAL"
-            },
-            "as_string": {
-              "type": "MANUAL"
-            },
-            "spreadsheetId": {
-              "type": "DYNAMIC"
-            },
-            "first_row_headers": {
-              "type": "MANUAL"
-            },
-            "includeTeamDrives": {
-              "type": "MANUAL"
+          "executionType": "EXECUTE_FIRST_MATCH"
+        },
+        "nextAction": {
+          "name": "step_5",
+          "valid": true,
+          "displayName": "Loop on Items",
+          "skip": false,
+          "lastUpdatedDate": "2026-08-04T18:40:32.656Z",
+          "type": "LOOP_ON_ITEMS",
+          "settings": {
+            "items": "{{ [-1, -2, -3, -4, -5] }}",
+            "sampleData": {
+              "lastTestDate": "2026-08-04T18:06:33.959Z",
+              "sampleDataFileId": "jTML9bpDIng3HlRB6Mp7V",
+              "sampleDataInputFileId": "Ecx7S6vsYDCyCclrdTgB6"
             }
           },
-          "errorHandlingOptions": {
-            "retryOnFailure": {
-              "value": false
-            },
-            "continueOnFailure": {
-              "value": false
+          "nextAction": {
+            "name": "step_2",
+            "valid": true,
+            "displayName": "Retornar Resposta",
+            "skip": false,
+            "lastUpdatedDate": "2026-08-04T18:40:32.657Z",
+            "type": "PIECE",
+            "settings": {
+              "input": {
+                "fields": {
+                  "body": {
+                    "status": 200
+                  },
+                  "status": 200,
+                  "headers": {}
+                },
+                "respond": "stop",
+                "responseType": "json"
+              },
+              "pieceName": "@activepieces/piece-webhook",
+              "actionName": "return_response",
+              "pieceVersion": "0.1.32",
+              "propertySettings": {
+                "fields": {
+                  "type": "MANUAL",
+                  "schema": {
+                    "body": {
+                      "type": "JSON",
+                      "required": true,
+                      "displayName": "JSON Body"
+                    },
+                    "status": {
+                      "type": "NUMBER",
+                      "required": false,
+                      "displayName": "Status",
+                      "defaultValue": 200
+                    },
+                    "headers": {
+                      "type": "OBJECT",
+                      "required": false,
+                      "displayName": "Headers"
+                    }
+                  }
+                },
+                "respond": {
+                  "type": "MANUAL"
+                },
+                "responseType": {
+                  "type": "MANUAL"
+                }
+              },
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
+              }
+            }
+          },
+          "firstLoopAction": {
+            "name": "step_6",
+            "valid": true,
+            "displayName": "Adicionar linha Copy",
+            "skip": false,
+            "lastUpdatedDate": "2026-08-04T18:40:32.657Z",
+            "type": "PIECE",
+            "settings": {
+              "input": {
+                "auth": "{{connections['2kUTXow33muKSl7hIfgAG']}}",
+                "values": {
+                  "values": [
+                    "{{step_5['item']}}"
+                  ]
+                },
+                "sheetId": 0,
+                "as_string": false,
+                "spreadsheetId": "1eLaIivekYnqbv651snUpq-GH5Vxnwk2BRbXPBr7PIRc",
+                "first_row_headers": false,
+                "includeTeamDrives": false
+              },
+              "pieceName": "@activepieces/piece-google-sheets",
+              "actionName": "insert_row",
+              "pieceVersion": "0.14.6",
+              "propertySettings": {
+                "values": {
+                  "type": "MANUAL",
+                  "schema": {
+                    "values": {
+                      "type": "ARRAY",
+                      "required": true,
+                      "displayName": "Row Values"
+                    }
+                  }
+                },
+                "sheetId": {
+                  "type": "MANUAL"
+                },
+                "as_string": {
+                  "type": "MANUAL"
+                },
+                "spreadsheetId": {
+                  "type": "DYNAMIC"
+                },
+                "first_row_headers": {
+                  "type": "MANUAL"
+                },
+                "includeTeamDrives": {
+                  "type": "MANUAL"
+                }
+              },
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
+              }
             }
           }
         },
-        "nextAction": {
-          "name": "step_2",
-          "valid": true,
-          "displayName": "Retornar Resposta",
-          "skip": false,
-          "lastUpdatedDate": "2026-08-03T19:07:58.075Z",
-          "type": "PIECE",
-          "settings": {
-            "input": {
-              "fields": {
-                "body": {
-                  "status": 200
+        "children": [
+          {
+            "name": "step_1",
+            "valid": true,
+            "displayName": "Adicionar linha",
+            "skip": false,
+            "lastUpdatedDate": "2026-08-04T18:40:32.656Z",
+            "type": "PIECE",
+            "settings": {
+              "input": {
+                "auth": "{{connections['2kUTXow33muKSl7hIfgAG']}}",
+                "values": {
+                  "values": [
+                    "0"
+                  ]
                 },
-                "status": 200,
-                "headers": {}
+                "sheetId": 0,
+                "as_string": false,
+                "spreadsheetId": "1eLaIivekYnqbv651snUpq-GH5Vxnwk2BRbXPBr7PIRc",
+                "first_row_headers": false,
+                "includeTeamDrives": false
               },
-              "respond": "stop",
-              "responseType": "json"
-            },
-            "pieceName": "@activepieces/piece-webhook",
-            "actionName": "return_response",
-            "pieceVersion": "0.1.32",
-            "propertySettings": {
-              "fields": {
-                "type": "MANUAL",
-                "schema": {
-                  "body": {
-                    "type": "JSON",
-                    "required": true,
-                    "displayName": "JSON Body"
-                  },
-                  "status": {
-                    "type": "NUMBER",
-                    "required": false,
-                    "displayName": "Status",
-                    "defaultValue": 200
-                  },
-                  "headers": {
-                    "type": "OBJECT",
-                    "required": false,
-                    "displayName": "Headers"
+              "pieceName": "@activepieces/piece-google-sheets",
+              "actionName": "insert_row",
+              "sampleData": {
+                "lastTestDate": "2026-08-04T18:00:20.301Z",
+                "sampleDataFileId": "Tgb0ZsnFTm69FyD7XWWCj",
+                "sampleDataInputFileId": "lotFG57DhIg2K8tABgmww"
+              },
+              "pieceVersion": "0.14.6",
+              "propertySettings": {
+                "values": {
+                  "type": "MANUAL",
+                  "schema": {
+                    "values": {
+                      "type": "ARRAY",
+                      "required": true,
+                      "displayName": "Row Values"
+                    }
                   }
+                },
+                "sheetId": {
+                  "type": "MANUAL"
+                },
+                "as_string": {
+                  "type": "MANUAL"
+                },
+                "spreadsheetId": {
+                  "type": "DYNAMIC"
+                },
+                "first_row_headers": {
+                  "type": "MANUAL"
+                },
+                "includeTeamDrives": {
+                  "type": "MANUAL"
                 }
               },
-              "respond": {
-                "type": "MANUAL"
-              },
-              "responseType": {
-                "type": "MANUAL"
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
               }
-            },
-            "errorHandlingOptions": {
-              "retryOnFailure": {
-                "value": false
+            }
+          },
+          {
+            "name": "step_4",
+            "valid": true,
+            "displayName": "Adicionar linha Copy",
+            "skip": false,
+            "lastUpdatedDate": "2026-08-04T18:40:32.657Z",
+            "type": "PIECE",
+            "settings": {
+              "input": {
+                "auth": "{{connections['2kUTXow33muKSl7hIfgAG']}}",
+                "values": {
+                  "values": [
+                    "1"
+                  ]
+                },
+                "sheetId": 0,
+                "as_string": false,
+                "spreadsheetId": "1eLaIivekYnqbv651snUpq-GH5Vxnwk2BRbXPBr7PIRc",
+                "first_row_headers": false,
+                "includeTeamDrives": false
               },
-              "continueOnFailure": {
-                "value": false
+              "pieceName": "@activepieces/piece-google-sheets",
+              "actionName": "insert_row",
+              "sampleData": {
+                "lastTestDate": "2026-08-04T18:00:27.380Z",
+                "sampleDataFileId": "pUDBl5coI7QUgHUMCMEvb",
+                "sampleDataInputFileId": "saMmEgHJETWs7coD6QQwz"
+              },
+              "pieceVersion": "0.14.6",
+              "propertySettings": {
+                "values": {
+                  "type": "MANUAL",
+                  "schema": {
+                    "values": {
+                      "type": "ARRAY",
+                      "required": true,
+                      "displayName": "Row Values"
+                    }
+                  }
+                },
+                "sheetId": {
+                  "type": "MANUAL"
+                },
+                "as_string": {
+                  "type": "MANUAL"
+                },
+                "spreadsheetId": {
+                  "type": "DYNAMIC"
+                },
+                "first_row_headers": {
+                  "type": "MANUAL"
+                },
+                "includeTeamDrives": {
+                  "type": "MANUAL"
+                }
+              },
+              "errorHandlingOptions": {
+                "retryOnFailure": {
+                  "value": false
+                },
+                "continueOnFailure": {
+                  "value": false
+                }
               }
             }
           }
-        }
+        ]
       }
     },
     "updatedBy": "2fiQRi0Bx39cUGTxfoCnn",
@@ -184,7 +369,40 @@
       "2kUTXow33muKSl7hIfgAG"
     ],
     "backupFiles": null,
-    "notes": []
+    "notes": [
+      {
+        "id": "Tb1G0juHYfA7qQFLKudsW",
+        "size": {
+          "width": 150,
+          "height": 150
+        },
+        "color": "blue",
+        "content": "Repete uma ação várias vezes até que uma condição seja atendida.",
+        "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
+        "position": {
+          "x": -240,
+          "y": 525
+        },
+        "createdAt": "2026-08-04T18:40:32.658Z",
+        "updatedAt": "2026-08-04T18:54:54.695Z"
+      },
+      {
+        "id": "b7pdjuX6DGX57Ue5dNscy",
+        "size": {
+          "width": 150,
+          "height": 150
+        },
+        "color": "yellow",
+        "content": "Escolhe uma entre várias alternativas com base no valor de uma condição.",
+        "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
+        "position": {
+          "x": 345,
+          "y": 60
+        },
+        "createdAt": "2026-08-04T18:40:32.658Z",
+        "updatedAt": "2026-08-04T18:54:35.037Z"
+      }
+    ]
   },
   "triggerSource": {
     "schedule": null

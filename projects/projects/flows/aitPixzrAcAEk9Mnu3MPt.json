@@ -1,0 +1,198 @@
+{
+  "id": "uIT0smoELRia19dhxtHQM",
+  "created": "2026-08-03T20:00:35.470Z",
+  "updated": "2026-08-03T20:00:35.954Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
+  "externalId": "aitPixzrAcAEk9Mnu3MPt",
+  "ownerId": null,
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "NuPeyzh3iVB5p4KZ2WRUk",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "NuPeyzh3iVB5p4KZ2WRUk",
+    "created": "2026-08-03T20:00:35.475Z",
+    "updated": "2026-08-03T20:00:35.645Z",
+    "flowId": "uIT0smoELRia19dhxtHQM",
+    "displayName": "Chat",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Interface do Chat",
+      "lastUpdatedDate": "2026-08-03T20:00:35.549Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "about": "",
+          "botName": "AI Bot",
+          "responseMarkdown": ""
+        },
+        "pieceName": "@activepieces/piece-forms",
+        "triggerName": "chat_submission",
+        "pieceVersion": "0.4.14",
+        "propertySettings": {
+          "about": {
+            "type": "MANUAL"
+          },
+          "botName": {
+            "type": "MANUAL"
+          },
+          "responseMarkdown": {
+            "type": "MANUAL"
+          }
+        }
+      },
+      "nextAction": {
+        "name": "step_1",
+        "valid": true,
+        "displayName": "Enviar solicitação HTTP",
+        "skip": false,
+        "lastUpdatedDate": "2026-08-03T20:00:35.549Z",
+        "type": "PIECE",
+        "settings": {
+          "input": {
+            "url": "https://n8n.app.onlinetechsolucoes.com.br/webhook/0f28e7c3-a6d9-431c-9a9d-8fed79c0b0ff",
+            "body": {
+              "data": {
+                "chatInput": "{{trigger['message']}}"
+              }
+            },
+            "method": "POST",
+            "headers": {},
+            "timeout": "",
+            "authType": "NONE",
+            "body_type": "json",
+            "use_proxy": false,
+            "authFields": {},
+            "failureMode": "continue_none",
+            "queryParams": {},
+            "proxy_settings": {},
+            "followRedirects": false,
+            "response_is_binary": false
+          },
+          "pieceName": "@activepieces/piece-http",
+          "actionName": "send_request",
+          "sampleData": {
+            "lastTestDate": "2026-08-03T18:20:55.532Z",
+            "sampleDataFileId": "EEXp4Lv6u8tl7GgyDi0x7",
+            "sampleDataInputFileId": "LFiE1c8902iysOsjMeX7s"
+          },
+          "pieceVersion": "0.11.8",
+          "propertySettings": {
+            "url": {
+              "type": "MANUAL"
+            },
+            "body": {
+              "type": "MANUAL",
+              "schema": {
+                "data": {
+                  "type": "JSON",
+                  "required": true,
+                  "displayName": "JSON Body"
+                }
+              }
+            },
+            "method": {
+              "type": "MANUAL"
+            },
+            "headers": {
+              "type": "MANUAL"
+            },
+            "timeout": {
+              "type": "MANUAL"
+            },
+            "authType": {
+              "type": "MANUAL"
+            },
+            "body_type": {
+              "type": "MANUAL"
+            },
+            "use_proxy": {
+              "type": "MANUAL"
+            },
+            "authFields": {
+              "type": "MANUAL",
+              "schema": {}
+            },
+            "failureMode": {
+              "type": "MANUAL"
+            },
+            "queryParams": {
+              "type": "MANUAL"
+            },
+            "proxy_settings": {
+              "type": "MANUAL",
+              "schema": {}
+            },
+            "followRedirects": {
+              "type": "MANUAL"
+            },
+            "response_is_binary": {
+              "type": "MANUAL"
+            }
+          },
+          "errorHandlingOptions": {
+            "retryOnFailure": {
+              "value": false
+            },
+            "continueOnFailure": {
+              "value": false
+            }
+          }
+        },
+        "nextAction": {
+          "name": "step_2",
+          "valid": true,
+          "displayName": "Responder na interface",
+          "skip": false,
+          "lastUpdatedDate": "2026-08-03T20:00:35.550Z",
+          "type": "PIECE",
+          "settings": {
+            "input": {
+              "file": "",
+              "markdown": "{{step_1['body']['output']}}"
+            },
+            "pieceName": "@activepieces/piece-forms",
+            "actionName": "return_response",
+            "sampleData": {
+              "lastTestDate": "2026-08-03T18:20:46.723Z",
+              "sampleDataFileId": "8M4SCLzXyvZHHoNJYgZ65",
+              "sampleDataInputFileId": "gtlw43zPkw0ORe08CXNzu"
+            },
+            "pieceVersion": "0.4.14",
+            "propertySettings": {
+              "file": {
+                "type": "MANUAL"
+              },
+              "markdown": {
+                "type": "MANUAL"
+              }
+            },
+            "errorHandlingOptions": {
+              "retryOnFailure": {
+                "value": false
+              },
+              "continueOnFailure": {
+                "value": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "updatedBy": null,
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}

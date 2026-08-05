@@ -1,0 +1,57 @@
+{
+  "id": "hPfXmOASOt0WXyIMLyBRO",
+  "created": "2026-08-03T20:00:35.091Z",
+  "updated": "2026-08-03T20:00:35.788Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
+  "externalId": "4HCUhygYRn6UPXTnlRXTW",
+  "ownerId": null,
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "kGN1CKPgRInMPADeC2Uwk",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "kGN1CKPgRInMPADeC2Uwk",
+    "created": "2026-08-03T20:00:35.099Z",
+    "updated": "2026-08-03T20:00:35.258Z",
+    "flowId": "hPfXmOASOt0WXyIMLyBRO",
+    "displayName": "Agendamento",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "A cada X minutos",
+      "lastUpdatedDate": "2026-08-03T20:00:35.148Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "minutes": 1
+        },
+        "pieceName": "@activepieces/piece-schedule",
+        "triggerName": "every_x_minutes",
+        "pieceVersion": "0.1.17",
+        "propertySettings": {
+          "minutes": {
+            "type": "DYNAMIC"
+          }
+        }
+      }
+    },
+    "updatedBy": null,
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": {
+      "type": "CRON_EXPRESSION",
+      "timezone": "UTC",
+      "cronExpression": "*/1 * * * *"
+    }
+  }
+}

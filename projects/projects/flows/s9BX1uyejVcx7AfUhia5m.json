@@ -1,0 +1,53 @@
+{
+  "id": "eP91rarH9fx3wStdpqyQV",
+  "created": "2026-08-03T20:00:34.952Z",
+  "updated": "2026-08-03T20:00:35.225Z",
+  "projectId": "0QoK8owkB67ErN9aBXVV0",
+  "externalId": "s9BX1uyejVcx7AfUhia5m",
+  "ownerId": null,
+  "folderId": null,
+  "status": "ENABLED",
+  "publishedVersionId": "3oDQtgXsoitVtFBXIahh2",
+  "metadata": null,
+  "operationStatus": "NONE",
+  "timeSavedPerRun": null,
+  "templateId": null,
+  "version": {
+    "id": "3oDQtgXsoitVtFBXIahh2",
+    "created": "2026-08-03T20:00:34.957Z",
+    "updated": "2026-08-03T20:00:35.038Z",
+    "flowId": "eP91rarH9fx3wStdpqyQV",
+    "displayName": "Manual",
+    "trigger": {
+      "name": "trigger",
+      "valid": true,
+      "displayName": "Gatilho manual",
+      "lastUpdatedDate": "2026-08-03T20:00:34.989Z",
+      "type": "PIECE_TRIGGER",
+      "settings": {
+        "input": {
+          "markdown": ""
+        },
+        "pieceName": "@activepieces/piece-manual-trigger",
+        "triggerName": "manual_trigger",
+        "pieceVersion": "0.0.5",
+        "propertySettings": {
+          "markdown": {
+            "type": "MANUAL"
+          }
+        }
+      }
+    },
+    "updatedBy": null,
+    "valid": true,
+    "schemaVersion": "21",
+    "agentIds": [],
+    "state": "LOCKED",
+    "connectionIds": [],
+    "backupFiles": null,
+    "notes": []
+  },
+  "triggerSource": {
+    "schedule": null
+  }
+}
