@@ -1,7 +1,7 @@
 {
   "id": "6rf6SBgaQA7G4cB5lXycU",
   "created": "2026-08-03T20:00:35.277Z",
-  "updated": "2026-08-04T18:54:54.690Z",
+  "updated": "2026-08-05T18:14:58.350Z",
   "projectId": "0QoK8owkB67ErN9aBXVV0",
   "externalId": "fjp8Y7F0TH1jqNS3A6QNq",
   "ownerId": null,
@@ -15,7 +15,7 @@
   "version": {
     "id": "98Yk9YJkAEBQu2PnSTXYK",
     "created": "2026-08-04T18:34:30.200Z",
-    "updated": "2026-08-04T18:54:54.695Z",
+    "updated": "2026-08-05T18:14:58.389Z",
     "flowId": "6rf6SBgaQA7G4cB5lXycU",
     "displayName": "Webhook",
     "trigger": {
@@ -396,11 +396,11 @@
         "content": "Escolhe uma entre várias alternativas com base no valor de uma condição.",
         "ownerId": "2fiQRi0Bx39cUGTxfoCnn",
         "position": {
-          "x": 345,
-          "y": 60
+          "x": 300,
+          "y": 15
         },
         "createdAt": "2026-08-04T18:40:32.658Z",
-        "updatedAt": "2026-08-04T18:54:35.037Z"
+        "updatedAt": "2026-08-05T18:14:58.389Z"
       }
     ]
   },
