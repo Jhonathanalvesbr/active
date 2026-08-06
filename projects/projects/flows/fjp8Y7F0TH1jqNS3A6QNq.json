@@ -1,28 +1,28 @@
 {
   "id": "6rf6SBgaQA7G4cB5lXycU",
   "created": "2026-08-03T20:00:35.277Z",
-  "updated": "2026-08-05T18:14:58.350Z",
+  "updated": "2026-08-05T18:15:53.317Z",
   "projectId": "0QoK8owkB67ErN9aBXVV0",
   "externalId": "fjp8Y7F0TH1jqNS3A6QNq",
   "ownerId": null,
   "folderId": null,
   "status": "ENABLED",
-  "publishedVersionId": "98Yk9YJkAEBQu2PnSTXYK",
+  "publishedVersionId": "4k8IXBOT6zWfnWAN3K0sA",
   "metadata": null,
   "operationStatus": "NONE",
   "timeSavedPerRun": null,
   "templateId": null,
   "version": {
-    "id": "98Yk9YJkAEBQu2PnSTXYK",
-    "created": "2026-08-04T18:34:30.200Z",
-    "updated": "2026-08-05T18:14:58.389Z",
+    "id": "4k8IXBOT6zWfnWAN3K0sA",
+    "created": "2026-08-05T18:15:46.437Z",
+    "updated": "2026-08-05T18:15:51.054Z",
     "flowId": "6rf6SBgaQA7G4cB5lXycU",
     "displayName": "Webhook",
     "trigger": {
       "name": "trigger",
       "valid": true,
       "displayName": "Capturar Webhook",
-      "lastUpdatedDate": "2026-08-04T18:40:32.655Z",
+      "lastUpdatedDate": "2026-08-05T18:15:47.900Z",
       "type": "PIECE_TRIGGER",
       "settings": {
         "input": {
@@ -56,7 +56,7 @@
         "valid": true,
         "displayName": "Router",
         "skip": false,
-        "lastUpdatedDate": "2026-08-04T18:40:32.656Z",
+        "lastUpdatedDate": "2026-08-05T18:15:47.901Z",
         "type": "ROUTER",
         "settings": {
           "branches": [
@@ -91,7 +91,7 @@
           "valid": true,
           "displayName": "Loop on Items",
           "skip": false,
-          "lastUpdatedDate": "2026-08-04T18:40:32.656Z",
+          "lastUpdatedDate": "2026-08-05T18:15:47.901Z",
           "type": "LOOP_ON_ITEMS",
           "settings": {
             "items": "{{ [-1, -2, -3, -4, -5] }}",
@@ -106,7 +106,7 @@
             "valid": true,
             "displayName": "Retornar Resposta",
             "skip": false,
-            "lastUpdatedDate": "2026-08-04T18:40:32.657Z",
+            "lastUpdatedDate": "2026-08-05T18:15:47.902Z",
             "type": "PIECE",
             "settings": {
               "input": {
@@ -167,7 +167,7 @@
             "valid": true,
             "displayName": "Adicionar linha Copy",
             "skip": false,
-            "lastUpdatedDate": "2026-08-04T18:40:32.657Z",
+            "lastUpdatedDate": "2026-08-05T18:15:47.902Z",
             "type": "PIECE",
             "settings": {
               "input": {
@@ -230,7 +230,7 @@
             "valid": true,
             "displayName": "Adicionar linha",
             "skip": false,
-            "lastUpdatedDate": "2026-08-04T18:40:32.656Z",
+            "lastUpdatedDate": "2026-08-05T18:15:47.902Z",
             "type": "PIECE",
             "settings": {
               "input": {
@@ -296,7 +296,7 @@
             "valid": true,
             "displayName": "Adicionar linha Copy",
             "skip": false,
-            "lastUpdatedDate": "2026-08-04T18:40:32.657Z",
+            "lastUpdatedDate": "2026-08-05T18:15:47.902Z",
             "type": "PIECE",
             "settings": {
               "input": {
@@ -383,8 +383,8 @@
           "x": -240,
           "y": 525
         },
-        "createdAt": "2026-08-04T18:40:32.658Z",
-        "updatedAt": "2026-08-04T18:54:54.695Z"
+        "createdAt": "2026-08-05T18:15:47.903Z",
+        "updatedAt": "2026-08-05T18:15:47.903Z"
       },
       {
         "id": "b7pdjuX6DGX57Ue5dNscy",
@@ -399,8 +399,8 @@
           "x": 300,
           "y": 15
         },
-        "createdAt": "2026-08-04T18:40:32.658Z",
-        "updatedAt": "2026-08-05T18:14:58.389Z"
+        "createdAt": "2026-08-05T18:15:47.903Z",
+        "updatedAt": "2026-08-05T18:15:47.903Z"
       }
     ]
   },
